@@ -1,6 +1,6 @@
 <?php
 include('autoloader.php');
-$page_title = "Home";
+$page_title = "Sign up";
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,9 +11,7 @@ $page_title = "Home";
         <div class="container-fluid content">
             <div class="row text-center">
                 <div class="col-sm-8">
-                    <a href="index.php">
-                        <image src="../images/logosm.png" alt="Royal Hotel"/>
-                    </a>
+                    <image src="../images/logosm.png" alt="Royal Hotel"/>
                 </div>
                 <div class="col-sm-4 set-height">
                     <form method="post" action="Controllers/booking.php">
@@ -22,7 +20,6 @@ $page_title = "Home";
                     
                 </div>
             </div> 
-            
             <div class="row">
                 <?php include('includes/navbar.php'); ?>
             </div>
