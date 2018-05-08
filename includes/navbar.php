@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   
-  <div class="collapse navbar-collapse order-10" id="nav-collapse">
+  <div class="collapse navbar-collapse order-10 " id="nav-collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home </a>

@@ -1,10 +1,5 @@
-body{
-    margin:0;
-    padding: 0;
-}
-.set-height{
-    line-height: 99px;
-}
-.text-center{
-    text-align: center;
+
+.breadcrumb > li + li:before {
+     content: "" !important;
+     color: #aaa;
 }

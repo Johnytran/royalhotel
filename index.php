@@ -8,7 +8,7 @@ $page_title = "Home";
     include ('includes/head.php');
     ?>
     <body>
-        <div class="container-fluid content">
+        <div class="container-fluid content container">
             <div class="row text-center">
                 <div class="col-sm-8">
                     <a href="index.php">
