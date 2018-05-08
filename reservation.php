@@ -55,20 +55,21 @@ $page_title = "Reservation";
                         <div class="col-sm">
                             <div class="form-group">
                                 <label for="arrivalDate">Arrival Date</label>
-                                <input type="text" class="form-control" id="arrivalDate" name="arrivalDate" placeholder="">
+                                <input type="text" class="form-control datepicker" id="arrivalDate"  name="arrivalDate" placeholder="dd/mm/yy">
                             </div>
                             <div class="form-group">
                                 <label for="departureDate">Departure Date</label>
-                                <input type="text" class="form-control" id="arridepartureDatevalDate" name="departureDate" placeholder="">
+                                <input type="text" class="form-control datepicker" id="arridepartureDatevalDate" name="departureDate" placeholder="dd/mm/yy">
                             </div>
                             <div class="form-group">
-                                <label for="departureDate">Num of Adults</label>
+                                <label for="numOfAdults">Num of Adults</label>
                                 <input type="text" class="form-control" id="adult" name="adult" placeholder="">
                             </div>
                             <div class="form-group">
-                                <label for="departureDate">Num of Children</label>
+                                <label for="numOfChildren">Num of Children</label>
                                 <input type="text" class="form-control" id="adult" name="children" placeholder="">
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -81,16 +82,16 @@ $page_title = "Reservation";
                     </div>
                     <button type="submit" class="btn btn-primary">Book</button>
                 </div>
-            
+                
+                <script>
+                    $j(document).ready(function(){
+                        $j(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+                    });
+                    
+                </script>
                 
             </form>                
             </div>
         </div>
     </body>
 </html>
-<style type="text/css">
-    .breadcrumb > li + li:before {
-         content: "" !important;
-         color: #aaa;
-    }
-</style>

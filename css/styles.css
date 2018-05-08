@@ -1,5 +1,5 @@
 
 .breadcrumb > li + li:before {
-     content: "" !important;
+     /*content: "" !important;*/
      color: #aaa;
 }
