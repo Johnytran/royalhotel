@@ -14,7 +14,8 @@ $page_title = "Reservation";
                     <image src="../images/logosm.png" alt="Royal Hotel"/>
                 </div>
                 <div class="col-sm-4 set-height">
-                    <form method="post" action="Controllers/booking.php">
+                    <form method="post" action="Controllers/booking.php" >
+                        
                         <button class="btn btn-secondary" type="submit">Book Now</button>
                     </form>
                     
@@ -37,37 +38,48 @@ $page_title = "Reservation";
                         <div class="col-sm">
                             <div class="form-group">
                                 <label for="firstName">First Name</label>
-                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                                <input type="text" class="form-control" required id="firstName" name="firstName" placeholder="First Name">
                             </div>
                             <div class="form-group">
                                 <label for="firstName">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                                <input type="text" class="form-control" required id="lastName" name="lastName" placeholder="Last Name">
                             </div>
                             <div class="form-group">
                                 <label for="firstName">Phone</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                                <input type="text" class="form-control" required id="phone" name="phoneNumber" placeholder="Phone">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" placeholder="Enter email">
+                                <input type="email" class="form-control" required id="email" aria-describedby="email" name="email" placeholder="Enter email">
                             </div>
                         </div>
                         <div class="col-sm">
                             <div class="form-group">
                                 <label for="arrivalDate">Arrival Date</label>
-                                <input type="text" class="form-control datepicker" id="arrivalDate"  name="arrivalDate" placeholder="dd/mm/yy">
+                                <input type="text" class="form-control datepicker" required id="arrivalDate"  name="arrivalDate" placeholder="dd/mm/yy">
                             </div>
                             <div class="form-group">
                                 <label for="departureDate">Departure Date</label>
-                                <input type="text" class="form-control datepicker" id="arridepartureDatevalDate" name="departureDate" placeholder="dd/mm/yy">
+                                <input type="text" class="form-control datepicker" required id="arridepartureDatevalDate" name="departureDate" placeholder="dd/mm/yy">
                             </div>
                             <div class="form-group">
                                 <label for="numOfAdults">Num of Adults</label>
-                                <input type="text" class="form-control" id="adult" name="adult" placeholder="">
+                                
+                                <select class="custom-select" required name="numOfAdult">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="numOfChildren">Num of Children</label>
-                                <input type="text" class="form-control" id="adult" name="children" placeholder="">
+                                    <select class="custom-select" required name="numOfChildren">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
                             </div>
                             
                         </div>
@@ -93,5 +105,11 @@ $page_title = "Reservation";
             </form>                
             </div>
         </div>
+        
+        
+        
+        
+        
     </body>
 </html>
+
