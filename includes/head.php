@@ -10,6 +10,5 @@
   <script src="/node_modules/jquery-validation/dist/jquery.validate.js"></script>
   <script>
     var $j = jQuery.noConflict();
-    $("form").validate();
   </script>
 </head>
