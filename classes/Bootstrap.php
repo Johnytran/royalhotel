@@ -7,7 +7,7 @@ class Bootstrap{
 	public function __construct($request){
 		$this->request = $request;
 		if($this->request['controller'] == ""){
-			$this->controller = 'home';
+			$this->controller = 'home';//by default open home page
 		} else {
 			$this->controller = $this->request['controller'];
 		}
@@ -27,7 +27,7 @@ class Bootstrap{
 				if(method_exists($this->controller, $this->action)){
 					return new $this->controller($this->action, $this->request);
 				} else {
-					// Method Does Not Exist
+					// The Method Does Not Exist
 					echo '<h1>Method does not exist</h1>';
 					return;
 				}
