@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     margin:0;
     padding: 0;
@@ -11,4 +12,10 @@ body{
 
 #userError{
     display: none;
+=======
+
+.breadcrumb > li + li:before {
+     /*content: "" !important;*/
+     color: #aaa;
+>>>>>>> 5a52270512403855aaac7d7329be6187b0abf28a
 }

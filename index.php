@@ -1,4 +1,5 @@
 <?php
+
 // Start Session
 session_start();
 
@@ -34,4 +35,4 @@ $controller = $bootstrap->createController();
 if($controller){
 	$controller->executeAction();
 }
-?>
+
