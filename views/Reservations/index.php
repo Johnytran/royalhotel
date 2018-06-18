@@ -63,7 +63,7 @@
               </ol>
             </div>
             <div class="row m-0 justify-content-center mt-5">
-            <form class="row" id="reservedForm">
+            <form id="reservedForm" autocomplete="off">
                 <div class="col-sm">
                     <div class="row">
                         <div class="col-sm">
@@ -128,3 +128,94 @@
                 </div>
             </form>                
             </div>
+                <script>
+                    $j(document).ready(function(){
+                        var validDate = false;
+                        $j("#departureDate").datepicker({
+                            numberOfMonths: 2,
+                            minDate: 0,
+                            dateFormat: "dd/mm/yy",
+                                onSelect: function (date) {
+                                    var dt2 = $j('#arrivalDate');
+                                    var startDate = $j(this).datepicker('getDate');
+                                    var minDate = $j(this).datepicker('getDate');
+                                    if(minDate=="")
+                                        minDate = $j('#departureDate').val();
+                                    console.log(minDate);
+                                    var d = new Date(minDate);
+                                    $j('.loading').css("display","block");
+                                    $j.get("../Controllers/roomdate.php?startDate="+encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate()), function(data, status){
+                                        var dataDecode = JSON.parse(data);
+                                        
+                                        if(!dataDecode.result){
+                                            $j('.loading').css("display","none");
+                                            alert("The from date is not valid with the current room from "+ dataDecode.validDate+ " and to "+ dataDecode.endDate+ ". Please book other date!");
+                                        }else{
+                                            $j('.loading').css("display","none");
+                                            validDate = true;
+                                        }
+                                        
+                                    });
+                                    
+                                    $j(this).datepicker('option', 'minDate', minDate);
+                                    
+                                    dt2.datepicker('setDate', minDate);
+                                    dt2.datepicker('option', 'minDate', minDate);
+                                }
+                            });
+                        
+                       $j('#arrivalDate').datepicker({
+                           numberOfMonths: 2,
+                            dateFormat: "dd/mm/yy",
+                            onSelect: function (date) {
+                                    
+                                    
+                                    var minDate = $j(this).datepicker('getDate');
+                                    if(minDate=="")
+                                        minDate = $j('#arrivalDate').val();
+                                    console.log(minDate);
+                                    var d = new Date(minDate);
+                                    
+                                    $j.get("../Controllers/roomdateend.php?endDate="+encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate()), function(data, status){
+                                        var dataDecode = JSON.parse(data);
+                                        if(!dataDecode.result){
+                                            alert("The to date is not valid with the current room is: "+ dataDecode.validDate+ ". Please book other date!");
+                                        }else{
+                                            validDate = true;
+                                        }
+                                        
+                                    });
+                                    
+                                }
+                            
+                        });
+                       
+                        
+                        
+                        $j("#reservedForm").submit(function(){
+                            var phone = $j('#phonenumber').val(),
+                                intRegex = /[0-9 -()+]+$/;
+                            if((phone.length < 6) || (!intRegex.test(phone)))
+                            {
+                                $j('#phonenumber').focus();
+                                alert('Please enter a valid phone number.');
+                                return false;
+                            }
+                            var startDate = "<?php echo $prepareData->startDate;?>";
+                            var endDate = "<?php echo $prepareData->endDate;?>";
+                            if(startDate!="" && endDate!="")
+                                validDate = true;
+                            
+                            if(!validDate){
+                                
+                                
+                                alert("the selected dates are not valid with the current room from <?php echo $dateFormat->startDate;?> to <?php echo $dateFormat->endDate;?> ");
+                                return false;
+                            }
+                                
+                        });
+                        
+                        
+                    });
+                    
+                </script>
