@@ -67,7 +67,7 @@
                 <div class="col-sm">
                     <div class="row">
                         <div class="col-sm">
-                            <div class="form-group">
+                            <div class="form-group"> 
                                 <label for="firstName">First Name</label>
                                 <input type="text" class="form-control" required id="firstName" name="firstName" placeholder="First Name">
                             </div>
