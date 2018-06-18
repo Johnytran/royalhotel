@@ -144,7 +144,8 @@
                                     console.log(minDate);
                                     var d = new Date(minDate);
                                     $j('.loading').css("display","block");
-                                    $j.get("../Controllers/roomdate.php?startDate="+encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate()), function(data, status){
+                                    $j.post("<?php echo ROOT_PATH; ?>Reservations/checkStartDate",{ startDate: encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate())}, function(data, status){
+                                        //console.log(data+"ssss");
                                         var dataDecode = JSON.parse(data);
                                         
                                         if(!dataDecode.result){
@@ -173,10 +174,11 @@
                                     var minDate = $j(this).datepicker('getDate');
                                     if(minDate=="")
                                         minDate = $j('#arrivalDate').val();
-                                    console.log(minDate);
+                                    //console.log(minDate);
                                     var d = new Date(minDate);
                                     
-                                    $j.get("../Controllers/roomdateend.php?endDate="+encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate()), function(data, status){
+                                    $j.post("<?php echo ROOT_PATH; ?>Reservations/checkEndDate",{ endDate: encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate())}, function(data, status){
+                                        
                                         var dataDecode = JSON.parse(data);
                                         if(!dataDecode.result){
                                             alert("The to date is not valid with the current room is: "+ dataDecode.validDate+ ". Please book other date!");
