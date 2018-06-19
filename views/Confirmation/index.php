@@ -80,35 +80,35 @@
                         <div class="col-sm">
                             <div class="form-group">
                                 <label for="firstName">First Name</label>
-                                <input type="text" disabled value="<?php echo $prepareData->firstName;?>" class="form-control" required id="firstName" name="firstName" placeholder="First Name">
+                                <input type="text"  value="<?php echo $prepareData->firstName;?>" class="form-control" required id="firstName" name="firstName" placeholder="First Name">
                             </div>
                             <div class="form-group">
                                 <label for="firstName">Last Name</label>
-                                <input type="text" disabled value="<?php echo $prepareData->lastName;?>" class="form-control" required id="lastName" name="lastName" placeholder="Last Name">
+                                <input type="text"  value="<?php echo $prepareData->lastName;?>" class="form-control" required id="lastName" name="lastName" placeholder="Last Name">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <input type="text" disabled value="<?php echo $prepareData->phone;?>" class="form-control" id="phonenumber" required id="phone" name="phoneNumber" placeholder="Phone">
+                                <input type="text"  value="<?php echo $prepareData->phone;?>" class="form-control" id="phonenumber" required id="phone" name="phoneNumber" placeholder="Phone">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" disabled value="<?php echo $prepareData->email;?>" class="form-control" required id="email" aria-describedby="email" name="email" placeholder="Enter email">
+                                <input type="email"  value="<?php echo $prepareData->email;?>" class="form-control" required id="email" aria-describedby="email" name="email" placeholder="Enter email">
                             </div>
                         </div>
                         <div class="col-sm">
                             <div class="form-group">
                                 <label for="departureDate">Start Date</label>
-                                <input type="text" disabled value="<?php echo $prepareData->startDate;?>" class="form-control datepicker" required id="departureDate" name="departureDate" placeholder="dd/mm/yy">
+                                <input type="text"  value="<?php echo $prepareData->startDate;?>" class="form-control datepicker" required id="departureDate" name="departureDate" placeholder="dd/mm/yy">
                             </div>
                             <div class="form-group">
                                 <label for="arrivalDate">End Date</label>
-                                <input type="text" disabled value="<?php echo $prepareData->endDate;?>" class="form-control datepicker" required id="arrivalDate"  name="arrivalDate" placeholder="dd/mm/yy">
+                                <input type="text"  value="<?php echo $prepareData->endDate;?>" class="form-control datepicker" required id="arrivalDate"  name="arrivalDate" placeholder="dd/mm/yy">
                             </div>
                             
                             <div class="form-group">
                                 <label for="numOfAdults">Num of Adults</label>
                                 
-                                <select class="custom-select" id="numOfAdult" required name="numOfAdult" disabled>
+                                <select class="custom-select" id="numOfAdult" required name="numOfAdult">
                                     <option selected>Choose...</option>
                                     <option value="1" <?php echo $prepareData->adults==1?"selected":""?>>1</option>
                                     <option value="2" <?php echo $prepareData->adults==2?"selected":""?>>2</option>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="numOfChildren">Num of Children</label>
-                                    <select class="custom-select" required id="numOfChildren" name="numOfChildren" disabled>
+                                    <select class="custom-select" required id="numOfChildren" name="numOfChildren">
                                     <option selected>Choose...</option>
                                     <option value="1" <?php echo $prepareData->children==1?"selected":""?>>1</option>
                                     <option value="2" <?php echo $prepareData->children==2?"selected":""?>>2</option>
@@ -131,9 +131,9 @@
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="questionComments">Question / Comments</label>
-                        <textarea class="form-control" id="comment" name="comment" disabled rows="8" placeholder=""><?php echo $prepareData->comment;?></textarea>
+                        <textarea class="form-control" id="comment" name="comment" rows="8" placeholder=""><?php echo $prepareData->comment;?></textarea>
                     </div>
-                    <input type="hidden" name="room_id" value="1"/>
+                    <input type="hidden" name="room_id" value="<?php echo $room_id;?>"/>
                     <button type="button" id="editForm" class="btn btn-primary">Edit</button>
                     <button type="submit" class="btn btn-primary">Done</button>
                 </div>
