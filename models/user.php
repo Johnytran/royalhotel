@@ -65,9 +65,16 @@ class UserModel extends Model{
 					"user_id"	=> $row['user_id'],
 					"name"	=> $row['name'],
 					"email"	=> $row['email'],
-					"phone" => $row['phone']
+					"phone" => $row['phone'],
+					"is_staff"=>$row['is_staff']
 				);
-				header('Location: '.ROOT_URL);
+				if($_SESSION['user_data']['is_staff']==0){//login with user will go to home page
+					header('Location: '.ROOT_URL);
+				}
+				else//login with admin will go to Room management page
+				{
+					header('Location: '.ROOT_URL.RoomList);
+				}
 			} else {
 				Messages::setMsg('Incorrect Login, Please try again', 'error');
 			}

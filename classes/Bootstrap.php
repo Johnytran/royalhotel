@@ -20,6 +20,7 @@ class Bootstrap{
 
 	public function createController(){
 		// Check Class
+		//echo $this->controller;
 		if(class_exists($this->controller)){
 			$parents = class_parents($this->controller);
 			// Check Extend

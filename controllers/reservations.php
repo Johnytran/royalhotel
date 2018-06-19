@@ -1,6 +1,7 @@
 <?php
 class Reservations extends Controller{
 	
+	private $checkout_date='';
 	protected function Index(){
 		
 		$viewmodel = new ReservationModel();
@@ -8,11 +9,16 @@ class Reservations extends Controller{
 		
 	}
 	public function checkStartDate(){
-		$roomAvailableStart = "2018/06/30";
+		$viewmodel = new ReservationModel();
+		$roomDate = $viewmodel->getRoomDate($_POST['room_id']);
+		$this->checkout_date = $roomDate[0]['check_out_date'];
+		$this->checkout_date = str_replace('-','/',$this->checkout_date);
+		
+		$roomAvailableStart = $this->checkout_date;
 		$roomAvailableEnd = "2018/08/01";
 		
 		$startDate = $_POST['startDate'];
-		//echo $startDate.'---';
+		//echo $roomAvailableStart.'---';
 		$myObj = new stdClass();
 		if(strtotime($startDate) >= strtotime($roomAvailableStart) && strtotime($startDate) <= strtotime($roomAvailableEnd)){ 
 		    $myObj->result = 1;
@@ -51,4 +57,5 @@ class Reservations extends Controller{
 		echo $myJSON;
 		exit;
 	}
+	
 }

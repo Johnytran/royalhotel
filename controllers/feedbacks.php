@@ -16,4 +16,9 @@ class Feedbacks extends Controller{
 		$viewmodel = new FeedBackModel();
 		$this->returnView($viewmodel->add(), true);
 	}
+	
+	protected function feedBackList(){
+		$viewmodel = new FeedBackModel();
+		$this->returnView($viewmodel->feedBackList(), true);
+	}
 }

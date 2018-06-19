@@ -30,3 +30,40 @@
 [22-May-2018 06:15:30 UTC] PHP Fatal error:  Class 'Date' not found in /home/ubuntu/workspace/Controllers/roomdate.php on line 13
 [22-May-2018 06:15:30 UTC] PHP Stack trace:
 [22-May-2018 06:15:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/Controllers/roomdate.php:0
+[18-Jun-2018 02:17:20 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:17:20 UTC] PHP Stack trace:
+[18-Jun-2018 02:17:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:18:34 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:18:34 UTC] PHP Stack trace:
+[18-Jun-2018 02:18:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:19:55 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:19:55 UTC] PHP Stack trace:
+[18-Jun-2018 02:19:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:21:59 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:21:59 UTC] PHP Stack trace:
+[18-Jun-2018 02:21:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:24:19 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:24:19 UTC] PHP Stack trace:
+[18-Jun-2018 02:24:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:27:10 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:33:55 UTC] PHP Warning:  include(classes/Controller.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:33:55 UTC] PHP Stack trace:
+[18-Jun-2018 02:33:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:33:55 UTC] PHP Warning:  include(): Failed opening 'classes/Controller.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:33:55 UTC] PHP Stack trace:
+[18-Jun-2018 02:33:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:33:55 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 3
+[18-Jun-2018 02:33:55 UTC] PHP Stack trace:
+[18-Jun-2018 02:33:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:35:10 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:35:10 UTC] PHP Stack trace:
+[18-Jun-2018 02:35:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:42:48 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:42:48 UTC] PHP Stack trace:
+[18-Jun-2018 02:42:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 02:58:17 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 02:58:17 UTC] PHP Stack trace:
+[18-Jun-2018 02:58:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0
+[18-Jun-2018 03:15:22 UTC] PHP Fatal error:  Class 'Controller' not found in /home/ubuntu/workspace/controllers/reservations.php on line 2
+[18-Jun-2018 03:15:22 UTC] PHP Stack trace:
+[18-Jun-2018 03:15:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/controllers/reservations.php:0

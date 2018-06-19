@@ -68,82 +68,81 @@
                 $prepareData->adults = $_SESSION['customer_data']["numOfAdult"];
                 $prepareData->children = $_SESSION['customer_data']["numOfChildren"];
                 $prepareData->comment = $_SESSION['customer_data']["comment"];
-                if(!isset($_SESSION['track_active']))
-                    $_SESSION['track_active'] = 1;
-                //echo $_SESSION['track_active'];
+                //if(!isset($_SESSION['track_active']))
+                $_SESSION['track_active'] = 3;
                 include('includes/tracking.php'); ?>
             </div>    
             <div class="row m-0 justify-content-center mt-5 contain-loading">
                 <img src="images/graphics/spinner1.gif" class="loading"/>
-            	<form method="post" action="<?php echo ROOT_PATH; ?>Payment" autocomplete="off">
+            	<form method="post" action="<?php echo ROOT_PATH; ?>Complete" autocomplete="off">
                     <div class="col-sm">
-                        <div class="row">
-                            <div class="col-sm">
-                                <div class="form-group">
-                                    <label for="firstName">First Name</label>
-                                    <input type="text"  value="<?php echo $prepareData->firstName;?>" class="form-control" required id="firstName" name="firstName" placeholder="First Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="firstName">Last Name</label>
-                                    <input type="text"  value="<?php echo $prepareData->lastName;?>" class="form-control" required id="lastName" name="lastName" placeholder="Last Name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text"  value="<?php echo $prepareData->phone;?>" class="form-control" id="phonenumber" required id="phone" name="phoneNumber" placeholder="Phone">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email</label>
-                                    <input type="email"  value="<?php echo $prepareData->email;?>" class="form-control" required id="email" aria-describedby="email" name="email" placeholder="Enter email">
-                                </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" disabled value="<?php echo $prepareData->firstName;?>" class="form-control" required id="firstName" name="firstName" placeholder="First Name">
                             </div>
-                            <div class="col-sm">
-                                <div class="form-group">
-                                    <label for="departureDate">Start Date</label>
-                                    <input type="text"  value="<?php echo $prepareData->startDate;?>" class="form-control datepicker" required id="departureDate" name="departureDate" placeholder="dd/mm/yy">
-                                </div>
-                                <div class="form-group">
-                                    <label for="arrivalDate">End Date</label>
-                                    <input type="text"  value="<?php echo $prepareData->endDate;?>" class="form-control datepicker" required id="arrivalDate"  name="arrivalDate" placeholder="dd/mm/yy">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="numOfAdults">Num of Adults</label>
-                                    
-                                    <select class="custom-select" required name="numOfAdult" >
-                                        <option selected>Choose...</option>
-                                        <option value="1" <?php echo $prepareData->adults==1?"selected":""?>>1</option>
-                                        <option value="2" <?php echo $prepareData->adults==2?"selected":""?>>2</option>
-                                        <option value="3" <?php echo $prepareData->adults==3?"selected":""?>>3</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="numOfChildren">Num of Children</label>
-                                        <select class="custom-select" required name="numOfChildren" >
-                                        <option selected>Choose...</option>
-                                        <option value="1" <?php echo $prepareData->children==1?"selected":""?>>1</option>
-                                        <option value="2" <?php echo $prepareData->children==2?"selected":""?>>2</option>
-                                        <option value="3" <?php echo $prepareData->children==3?"selected":""?>>3</option>
-                                    </select>
-                                </div>
-                                
+                            <div class="form-group">
+                                <label for="firstName">Last Name</label>
+                                <input type="text" disabled value="<?php echo $prepareData->lastName;?>" class="form-control" required id="lastName" name="lastName" placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" disabled value="<?php echo $prepareData->phone;?>" class="form-control" id="phonenumber" required id="phone" name="phoneNumber" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" disabled value="<?php echo $prepareData->email;?>" class="form-control" required id="email" aria-describedby="email" name="email" placeholder="Enter email">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="form-group">
-                            <label for="questionComments">Question / Comments</label>
-                            <textarea class="form-control" id="comment" name="comment"  rows="8" placeholder=""><?php echo $prepareData->comment;?></textarea>
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <label for="departureDate">Start Date</label>
+                                <input type="text" disabled value="<?php echo $prepareData->startDate;?>" class="form-control datepicker" required id="departureDate" name="departureDate" placeholder="dd/mm/yy">
+                            </div>
+                            <div class="form-group">
+                                <label for="arrivalDate">End Date</label>
+                                <input type="text" disabled value="<?php echo $prepareData->endDate;?>" class="form-control datepicker" required id="arrivalDate"  name="arrivalDate" placeholder="dd/mm/yy">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="numOfAdults">Num of Adults</label>
+                                
+                                <select class="custom-select" id="numOfAdult" required name="numOfAdult" disabled>
+                                    <option selected>Choose...</option>
+                                    <option value="1" <?php echo $prepareData->adults==1?"selected":""?>>1</option>
+                                    <option value="2" <?php echo $prepareData->adults==2?"selected":""?>>2</option>
+                                    <option value="3" <?php echo $prepareData->adults==3?"selected":""?>>3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="numOfChildren">Num of Children</label>
+                                    <select class="custom-select" required id="numOfChildren" name="numOfChildren" disabled>
+                                    <option selected>Choose...</option>
+                                    <option value="1" <?php echo $prepareData->children==1?"selected":""?>>1</option>
+                                    <option value="2" <?php echo $prepareData->children==2?"selected":""?>>2</option>
+                                    <option value="3" <?php echo $prepareData->children==3?"selected":""?>>3</option>
+                                </select>
+                            </div>
+                            
                         </div>
-                        <input type="hidden" name="room_id" value="1"/>
-                        <button type="submit" class="btn btn-primary">Done</button>
                     </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="questionComments">Question / Comments</label>
+                        <textarea class="form-control" id="comment" name="comment" disabled rows="8" placeholder=""><?php echo $prepareData->comment;?></textarea>
+                    </div>
+                    <input type="hidden" name="room_id" value="1"/>
+                    <button type="button" id="editForm" class="btn btn-primary">Edit</button>
+                    <button type="submit" class="btn btn-primary">Done</button>
+                </div>
                 
-            </form>                
-            </div>
                 <script>
                     var $j = jQuery.noConflict();
                     $j(document).ready(function(){
                         var validDate = false;
+                        var isEdited = false;
                         $j("#departureDate").datepicker({
                             numberOfMonths: 2,
                             minDate: 0,
@@ -152,9 +151,6 @@
                                     var dt2 = $j('#arrivalDate');
                                     var startDate = $j(this).datepicker('getDate');
                                     var minDate = $j(this).datepicker('getDate');
-                                    if(minDate=="")
-                                        minDate = $j('#departureDate').val();
-                                    console.log(minDate);
                                     var d = new Date(minDate);
                                     $j('.loading').css("display","block");
                                     $j.post("<?php echo ROOT_PATH; ?>Reservations/checkStartDate",{ room_id:'<?php echo $room_id;?>',startDate: encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate())}, function(data, status){
@@ -185,9 +181,6 @@
                                     
                                     
                                     var minDate = $j(this).datepicker('getDate');
-                                    if(minDate=="")
-                                        minDate = $j('#arrivalDate').val();
-                                    //console.log(minDate);
                                     var d = new Date(minDate);
                                     
                                     $j.post("<?php echo ROOT_PATH; ?>Reservations/checkEndDate",{ endDate: encodeURI(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate())}, function(data, status){
@@ -205,27 +198,35 @@
                             
                         });
                        
-                        
+                        $j("#editForm").click(function(){
+                            isEdited == true;
+                            $j("#firstName").removeAttr("disabled");
+                            $j("#lastName").removeAttr("disabled");
+                            $j("#phonenumber").removeAttr("disabled");
+                            $j("#email").removeAttr("disabled");
+                            $j("#departureDate").removeAttr("disabled");
+                            $j("#arrivalDate").removeAttr("disabled");
+                            $j("#numOfAdult").removeAttr("disabled");
+                            $j("#numOfChildren").removeAttr("disabled");
+                            $j("#comment").removeAttr("disabled");
+                        });
                         
                         $j("#reservedForm").submit(function(){
-                            var phone = $j('#phonenumber').val(),
-                                intRegex = /[0-9 -()+]+$/;
-                            if((phone.length < 6) || (!intRegex.test(phone)))
-                            {
-                                $j('#phonenumber').focus();
-                                alert('Please enter a valid phone number.');
-                                return false;
-                            }
-                            var startDate = "<?php echo $prepareData->startDate;?>";
-                            var endDate = "<?php echo $prepareData->endDate;?>";
-                            if(startDate!="" && endDate!="")
-                                validDate = true;
-                            
-                            if(!validDate){
-                                
-                                
-                                alert("the selected dates are not valid with the current room from <?php echo $dateFormat->startDate;?> to <?php echo $dateFormat->endDate;?> ");
-                                return false;
+                            if(isEdited==true){
+                                var phone = $j('#phonenumber').val(),
+                                    intRegex = /[0-9 -()+]+$/;
+                                if((phone.length < 6) || (!intRegex.test(phone)))
+                                {
+                                    $j('#phonenumber').focus();
+                                    alert('Please enter a valid phone number.');
+                                    return false;
+                                }
+                                if(!validDate){
+                                    alert("the selected dates are not valid with the current room from <?php echo $dateFormat->startDate;?> to <?php echo $dateFormat->endDate;?> ");
+                                    return false;
+                                }
+                            }else{
+                                return true;
                             }
                                 
                         });
@@ -234,3 +235,7 @@
                     });
                     
                 </script>
+                
+            </form>                
+            </div>
+               

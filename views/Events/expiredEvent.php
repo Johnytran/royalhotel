@@ -33,7 +33,7 @@ date_default_timezone_set('Australia/Sydney');
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner"  style="height:600px;" >
     <div class="carousel-item active">
-      <img class="d-block w-100" src="images/header1.jpg"style="height:600px;" alt="First slide">
+      <img class="d-block w-100" src="../images/header1.jpg"style="height:600px;" alt="First slide">
       </div>
       <div class="carousel-caption " style="margin-bottom:70px;">
         <h1>EVENTS</h1>
@@ -42,10 +42,10 @@ date_default_timezone_set('Australia/Sydney');
       </div>
     
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/header2.jpg" style="height:600px; blur:30%;" alt="Second slide">
+      <img class="d-block w-100" src="../images/header2.jpg" style="height:600px; blur:30%;" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="images/header3.jpg" style="height:600px; blur:30%;" alt="Third slide">
+      <img class="d-block w-100" src="../images/header3.jpg" style="height:600px; blur:30%;" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" >
@@ -60,9 +60,9 @@ date_default_timezone_set('Australia/Sydney');
 
 <div class="container-fluid ">
     <nav class="nav"> <!--display time event-->
-      <a class="nav-link active" href="<?php echo ROOT_PATH; ?>Events" style="color:red">Upcoming</a>
-      <a class="nav-link" href="<?php echo ROOT_PATH; ?>Events/happeningEvent">Happening</a>
-      <a class="nav-link" href="<?php echo ROOT_PATH; ?>Events/expiredEvent">Expired</a>
+      <a class="nav-link active" href="<?php echo ROOT_PATH; ?>Events">Upcoming</a>
+      <a class="nav-link" href="<?php echo ROOT_PATH; ?>Events/happeningEvent" >Happening</a>
+      <a class="nav-link" href="<?php echo ROOT_PATH; ?>Events/expiredEvent" style="color:red">Expired</a>
     </nav><!--display time event-->
     
 <!-- Section: Blog v.3 -->
@@ -74,18 +74,18 @@ date_default_timezone_set('Australia/Sydney');
   <p class="text-center dark-grey-text w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <?php foreach($viewmodel as $item) : ?>
-<?php if($item['event_start_date'] > date('Y-m-d H:i:s')) : ?>
-  
-  <hr>
-  <!-- Grid row -->
-  <div class="row" style="word-wrap:break-word; word-break:break-all;">
+<?php if($item['event_start_date'] < date('Y-m-d H:i:s')) : ?>
 
+    <hr>
+  <!-- Grid row -->
+  <div class="row m-0 block" style="word-wrap:break-word; word-break:break-all;">
+    
     <!-- Grid column -->
-    <div class="col-lg-5 col-xl-4" >
+    <div class="col-lg-5 col-xl-4">
 
       <!-- Featured image -->
-      <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4" >
-        <img class="img-fluid" style="width:100%;"  src="/images/<?php echo $item['event_image']; ?>" alt="Sample image">
+      <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+        <img class="img-fluid" style="width:100%;" src="/images/<?php echo $item['event_image']; ?>" alt="Sample image">
         <a>
           <div class="mask rgba-white-slight"></div>
         </a>
@@ -95,7 +95,7 @@ date_default_timezone_set('Australia/Sydney');
     <!-- Grid column -->
 
     <!-- Grid column -->
-    <div class="col-lg-7 col-xl-8 block">
+    <div class="col-lg-7 col-xl-8">
 
       <!-- Post title -->
       <h3 class="font-weight-bold mb-3"><strong><?php echo $item['event_title']; ?></strong></h3>
@@ -104,7 +104,6 @@ date_default_timezone_set('Australia/Sydney');
       <!-- Post data -->
       <p>by <a class="font-weight-bold">Admin</a></p>
       <h5>Start on <?php echo $item['event_start_date']; ?></h5>
-
 
     </div>
     <!-- Grid column -->

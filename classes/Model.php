@@ -1,4 +1,3 @@
-<!--Connect database-->
 <?php
 abstract class Model{
 	protected $dbh;

@@ -26,6 +26,7 @@
 	</div> <!-- form-group// -->
 	<p class="text-center"><a href="#" class="btn">Forgot password?</a></p>
 	<a href="<?php echo ROOT_PATH; ?>Users/register" class="btn btn-primary btn-block"> Do not have an account? Sign up now?  </a>
+	
 	</form>
 </article>
 </div> <!-- card.// -->

@@ -25,7 +25,10 @@
     </ul>
   </div>
 </nav><!--end navbar for display menu-->
- 
+ <?php 
+date_default_timezone_set('Australia/Sydney'); 
+
+?>
  <!--Carousel slide-->
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner"  style="height:600px;" >
@@ -56,41 +59,19 @@
 </div><!--Carousel slide-->
 
 <div class="container-fluid mt-3 border border-dark "> <!--check availability form-->
-                        <form class="row p-3  " method="post">
+                        <form class="row p-3  " method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
                           <div class="col-sm border border-dark ml-2 ">
                             <h2>Check-in</h2>
                             <hr>
-                            <input class="form-control" type="date" value="current" id="example-date-input">
+                            <input class="form-control" type="date" value="current" id="example-date-input" required>
                           </div>
                           <div class="col-sm border border-dark ml-2">
                             <h2>Check-out</h2>
                             <hr>
-                            <input class="form-control" type="date" value="current" id="example-date-input">
-                          </div>
-                          <div class="col-sm border border-dark ml-2">
-                             <h2>Adults</h2>
-                            <hr>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                            </select>
-                          </div>
-                         <div class="col-sm border border-dark ml-2">
-                           <h2>Childrens</h2>
-                            <hr>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>0</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                            </select>
+                            <input class="form-control" type="date" value="current" id="example-date-input" required>
                           </div>
                           <div class="col-sm ml-2">
-                           <button type="submit" class="btn btn-primary form-control  "><h1>Check <br>Availability</h1></button>
+                           <a type="submit" name="submit" class="btn btn-primary form-control" href="<?php echo ROOT_PATH; ?>Home/listAvailableRoom"><h1>Check <br>Availability</h1></a>
                          </div>
                          </form>
                 </div><!--check availability form-->

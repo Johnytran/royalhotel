@@ -6,12 +6,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
   <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/node_modules/jquery-ui-dist/jquery-ui.min.css">
   <link href="/css/styles.css" rel="stylesheet">
   <!--preload spinner image-->
   <link href="/images/graphics/spinner1.gif" rel="preload" as="image">
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
   <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  
 </head>
 <body>
 	 <!--Logo and member and book now on the top-->
