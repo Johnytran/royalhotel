@@ -124,7 +124,6 @@
                                     <option value="3" <?php echo $prepareData->children==3?"selected":""?>>3</option>
                                 </select>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
